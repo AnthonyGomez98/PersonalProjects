@@ -68,8 +68,8 @@ Depending on the project, I use:
 
 Want to connect, collaborate, or offer feedback?
 
-- GitHub: [github.com/AnthonyGomez98](https://github.com/AnthonyGomez98)
-- LinkedIn: [linkedin.com/in/anthonyagomez](https://www.linkedin.com/in/anthonyagomez)
+- GitHub: 
+- LinkedIn: 
 - Personal Site: *(Coming Soon)*
 
 ---
