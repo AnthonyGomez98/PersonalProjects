@@ -1,0 +1,84 @@
+--match first name to an order id
+SELECT Customers.first_name, Orders.Order_ID
+FROM Customers
+INNER JOIN Orders ON Customers.Customer_ID = Orders.Customer_ID;
+
+
+--combine both tables
+SELECT
+    c.customer_id,
+    c.first_name,
+    c.last_name,
+    c.email,
+    o.order_id,
+    o.order_date,
+    o.order_total
+FROM
+    [CustomeOrders].[dbo].[customers] AS c
+INNER JOIN
+    [CustomeOrders].[dbo].[orders] AS o ON c.customer_id = o.customer_id
+
+
+
+--combine both tables and list in order by customer id
+SELECT
+    c.customer_id,
+    c.first_name,
+    c.last_name,
+    c.email,
+    o.order_id,
+    o.order_date,
+    o.order_total
+FROM
+    [CustomeOrders].[dbo].[customers] AS c
+INNER JOIN
+    [CustomeOrders].[dbo].[orders] AS o ON c.customer_id = o.customer_id ORDER BY customer_id;
+
+
+
+--combine both tables and list in order by order id
+SELECT
+    c.customer_id,
+    c.first_name,
+    c.last_name,
+    c.email,
+    o.order_id,
+    o.order_date,
+    o.order_total
+FROM
+    [CustomeOrders].[dbo].[customers] AS c
+INNER JOIN
+    [CustomeOrders].[dbo].[orders] AS o ON c.customer_id = o.customer_id ORDER BY order_id
+
+--add additional order_quarter to track sales per quarter
+SELECT
+    c.customer_id,
+    c.first_name,
+    c.last_name,
+    c.email,
+    o.order_id,
+    o.order_date,
+    DATEPART(quarter, o.order_date) AS order_quarter,
+    o.order_total
+FROM
+    [CustomeOrders].[dbo].[customers] AS c
+INNER JOIN
+    [CustomeOrders].[dbo].[orders] AS o ON c.customer_id = o.customer_id
+ORDER BY
+    order_quarter
+
+--collect totals and sort by quarter
+SELECT
+    DATEPART(year, o.order_date) AS order_year,
+    DATEPART(quarter, o.order_date) AS order_quarter,
+    SUM(o.order_total) AS total_quarterly_sales
+FROM
+    [CustomeOrders].[dbo].[customers] AS c
+INNER JOIN
+    [CustomeOrders].[dbo].[orders] AS o ON c.customer_id = o.customer_id
+GROUP BY
+    DATEPART(year, o.order_date),
+    DATEPART(quarter, o.order_date)
+ORDER BY
+    order_year,
+    order_quarter;

@@ -34,6 +34,8 @@ Each subfolder in this repository represents a self-contained project. All code,
 | `cloud-cost-optimizer`           | Early-stage project for estimating and comparing AWS service costs with savings plan suggestions. |
 | `iam-policy-reviewer`            | Parses and flags overly permissive IAM policies to support security hardening efforts. |
 | `epcot-festival-planner`         | A custom-built app to help visitors track booths, dishes, prices, and reviews at Disney’s EPCOT Food & Wine Festival. |
+| `health-report-generator`        | Python-based tool that processes employee health data to identify top performers and support wellness-based incentives. |
+| `order-tracking-simulation`      | Simulates customer orders using Python and mock data to model order flow and test data-driven features. |
 | *(More coming soon!)*            | As I continue learning and building, this list will grow with new tools and experiments. |
 
 ---
