@@ -1,4 +1,4 @@
-# 🩺 AWS Health Checker CLI
+#  AWS Health Checker CLI
 
 A lightweight Python tool that fetches AWS Health events using the AWS Health API, with optional filters by region, service, and time range.
 
@@ -19,7 +19,7 @@ python aws_health_checker.py --region us-east-1 --service EC2 --start-time 2025-
 
 # Just show total number of events
 python aws_health_checker.py --start-time 2025-07-01 --end-time 2025-08-01 --summary
-⚙️ Requirements
+ Requirements
 Python 3.8+
 
 AWS CLI configured with access to health:DescribeEvents
