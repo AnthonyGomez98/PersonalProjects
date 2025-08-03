@@ -1,4 +1,4 @@
-# 👨‍💻 Anthony Gomez – Personal Projects Repository
+#  Anthony Gomez – Personal Projects Repository
 
 Welcome to my personal development space! This repository is home to a collection of hands-on projects I've built to sharpen my skills, explore new technologies, and demonstrate my growth as an aspiring cloud engineer and developer.
 
@@ -6,7 +6,7 @@ Whether you're here to explore specific tools, evaluate my skills, or follow my 
 
 ---
 
-## 🧠 About Me
+##  About Me
 
 Hi, I'm **Anthony Gomez** — a driven and curious self-learner with a background in customer support and small business ownership. I’m currently working as a **Customer Support Specialist II** while actively transitioning into **cloud engineering**.
 
@@ -21,26 +21,23 @@ My long-term goal is to become a highly skilled cloud engineer, capable of build
 
 ---
 
-## 📁 Repository Structure
+##  Repository Structure
 
 Each subfolder in this repository represents a self-contained project. All code, dependencies, and documentation for each project lives within its own folder.
 
-### ✅ Currently Included Projects
+###  Currently Included Projects
 
 | Project                          | Description |
 |----------------------------------|-------------|
 | `aws-health-checker-cli`         | Command-line tool using the AWS Health API to check AWS service events by region, service, and time. |
-| `aws-resource-audit-tool`        | CLI tool to audit AWS resources across accounts for usage, cost, and compliance insights. |
-| `cloud-cost-optimizer`           | Early-stage project for estimating and comparing AWS service costs with savings plan suggestions. |
-| `iam-policy-reviewer`            | Parses and flags overly permissive IAM policies to support security hardening efforts. |
 | `epcot-festival-planner`         | A custom-built app to help visitors track booths, dishes, prices, and reviews at Disney’s EPCOT Food & Wine Festival. |
-| `health-report-generator`        | Python-based tool that processes employee health data to identify top performers and support wellness-based incentives. |
-| `order-tracking-simulation`      | Simulates customer orders using Python and mock data to model order flow and test data-driven features. |
+| `OrderTracking`                  | A simple order tracking project to learn SQL and join tables. |
+| `HealthReport`                   | Custom report to determine lower health risked employees for higher wages. |
 | *(More coming soon!)*            | As I continue learning and building, this list will grow with new tools and experiments. |
 
 ---
 
-## 🔧 Tech Stack
+##  Tech Stack
 
 Depending on the project, I use:
 
@@ -55,7 +52,7 @@ Depending on the project, I use:
 
 ---
 
-## 📈 Goals for This Repo
+##  Goals for This Repo
 
 - Show measurable growth in coding and problem-solving skills  
 - Build a portfolio that reflects real-world utility and good practices  
@@ -64,7 +61,7 @@ Depending on the project, I use:
 
 ---
 
-## 📬 Contact & Networking
+##  Contact & Networking
 
 Want to connect, collaborate, or offer feedback?
 
@@ -74,7 +71,7 @@ Want to connect, collaborate, or offer feedback?
 
 ---
 
-## 📄 License
+##  License
 
 Unless otherwise specified in a subfolder, all code in this repository is covered under the [MIT License](./LICENSE).
 
