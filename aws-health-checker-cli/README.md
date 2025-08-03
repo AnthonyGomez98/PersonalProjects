@@ -1,101 +1,44 @@
-# AWS Health Checker CLI
+# 🩺 AWS Health Checker CLI
 
-A simple command-line interface tool to check the health and availability of AWS services in a specific region using the AWS Health API.
+A lightweight Python tool that fetches AWS Health events using the AWS Health API, with optional filters by region, service, and time range.
 
-## 📌 Features
+##  Features
 
-- Check AWS service health by region  
-- View open and recent AWS Health events  
-- Option to filter by service, event status, or time range  
-- Lightweight and easy to use  
-- Built with Python and Boto3
+- Filter AWS Health events by:
+  - Region (e.g., `us-east-1`)
+  - Service (e.g., `EC2`)
+  - Start/end time
+- Optional summary mode for quick event count
+- Uses `boto3` and standard Python libraries
 
-## 🚀 Getting Started
+##  Example Usage
 
-### Prerequisites
+```bash
+# List all EC2 events in us-east-1
+python aws_health_checker.py --region us-east-1 --service EC2 --start-time 2025-07-01 --end-time 2025-08-01
 
-- Python 3.7+
-- AWS credentials configured via:
-  - `~/.aws/credentials`, or
-  - Environment variables, or
-  - IAM role (if running in AWS)
+# Just show total number of events
+python aws_health_checker.py --start-time 2025-07-01 --end-time 2025-08-01 --summary
+⚙️ Requirements
+Python 3.8+
 
-You also need to enable the **AWS Health API** for your account (part of AWS Business or Enterprise support plans).
+AWS CLI configured with access to health:DescribeEvents
 
-### Installation
-
-1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/AnthonyGomez98/aws-health-checker-cli.git
-   cd aws-health-checker-cli
-Create and activate a virtual environment (optional but recommended):
-
-bash
-Copy
-Edit
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
 Install dependencies:
 
 bash
 Copy
 Edit
 pip install -r requirements.txt
-Usage
-Basic command:
+ Purpose
+This project demonstrates:
 
-bash
-Copy
-Edit
-python aws_checker.py
-Optional flags:
+Practical use of AWS SDK (boto3)
 
-Flag	Description
---region	Specify AWS region (e.g. us-east-1)
---service	Filter by AWS service (e.g. EC2, S3)
---status	Filter by event status (open, closed)
---days	Limit to events within the last X days
+CLI argument parsing with argparse
 
-Example:
+Working with date filtering, API response parsing, and output formatting
 
-bash
-Copy
-Edit
-python health_check.py --region us-east-1 --service EC2 --status open --days 3
-🛠 Project Structure
-bash
-Copy
-Edit
-aws-health-checker-cli/
-├── health_check.py        # Main CLI logic
-├── requirements.txt       # Python dependencies
-└── README.md              # Project documentation
-✅ Example Output
-yaml
-Copy
-Edit
-[✓] Found 2 open events for EC2 in us-east-1
-
-- [Open] EC2 degraded performance in us-east-1
-  Start: 2025-07-27 10:32 UTC
-  Last Update: 2025-07-27 11:10 UTC
-  Event ARN: arn:aws:health:...
-
-- [Open] EC2 instance launch delays in us-east-1
-  Start: 2025-07-27 08:00 UTC
-  Last Update: 2025-07-27 09:45 UTC
-  Event ARN: arn:aws:health:...
-🧩 Future Enhancements
-Export to JSON/CSV
-
-Email or Slack alerts
-
-Health dashboard view
-
-Unit tests and CI/CD pipeline
-
-📄 License
 MIT License
 
 Copyright (c) 2025 Anthony Gomez
